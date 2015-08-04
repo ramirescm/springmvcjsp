@@ -9,18 +9,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>List of teams</title>
+<link type="text/css"
+	href="<%=request.getContextPath()%>/resources/css/bootstrap.css"
+	rel="stylesheet" />
 </head>
 <body>
-	<a href="${pageContext.request.contextPath}/team/add">Add new team</a>
-	<br />
-	<h1>List of teams</h1>
-		${message}<br />
-		<p>Here you can see the list of the teams, edit them, remove or
-			update.</p>
-		<table border="1px" cellpadding="0" cellspacing="0">
+<jsp:include page="/WEB-INF/views/header.jsp" />
+	<div class="container">
+		<a class="btn btn-primary" role="button" href="${pageContext.request.contextPath}/team/add">New team</a>
+		<h1>List of teams</h1>
+		<table class="table">
 			<thead>
 				<tr>
-					<th width="10%">id</th>
+					<th width="10%">#</th>
 					<th width="15%">name</th>
 					<th width="10%">actions</th>
 				</tr>
@@ -31,9 +32,9 @@
 						<td>${team.id}</td>
 						<td>${team.name}</td>
 						<td><a
-							href="${pageContext.request.contextPath}/team/${team.id}">Edit</a><br />
+							class="btn btn-primary" role="button" href="${pageContext.request.contextPath}/team/${team.id}">Edit</a>
 							<a
-							href="${pageContext.request.contextPath}/team/delete/${team.id}">Delete</a><br />
+							class="btn btn-primary" role="button" href="${pageContext.request.contextPath}/team/delete/${team.id}">Delete</a>
 						</td>
 					</tr>
 				</c:forEach>
@@ -43,5 +44,6 @@
 		<p>
 			<a href="${pageContext.request.contextPath}/index.html">Home page</a>
 		</p>
+	</div>
 </body>
 </html>

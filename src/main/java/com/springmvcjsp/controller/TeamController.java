@@ -52,7 +52,10 @@ public class TeamController {
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public String save(@Validated  @ModelAttribute Team team, final RedirectAttributes redirectAttrs, BindingResult result) {
+		System.out.println(result.toString());
+		System.out.println(team.toString());
 		if (result.hasErrors()) {
+			System.out.println("aki");
 			return "team/add";
 		} else {
 			if(team.getId() == null){
