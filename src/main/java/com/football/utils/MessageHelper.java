@@ -1,4 +1,4 @@
-package com.springmvcjsp.utils;
+package com.football.utils;
 
 import org.springframework.ui.Model;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;

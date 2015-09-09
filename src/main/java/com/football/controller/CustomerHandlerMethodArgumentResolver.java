@@ -1,4 +1,4 @@
-package com.springmvcjsp.controller;
+package com.football.controller;
 
 import javax.servlet.http.HttpServletRequest;
 

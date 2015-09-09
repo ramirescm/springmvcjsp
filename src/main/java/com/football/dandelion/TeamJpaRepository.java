@@ -1,4 +1,4 @@
-package com.springmvcjsp.dandelion;
+package com.football.dandelion;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,9 +11,9 @@ import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 
+import com.football.model.Team;
 import com.github.dandelion.datatables.core.ajax.ColumnDef;
 import com.github.dandelion.datatables.core.ajax.DatatablesCriterias;
-import com.springmvcjsp.model.Team;
 
 @Repository
 public class TeamJpaRepository implements TeamDandelionRepository {

@@ -1,4 +1,4 @@
-package com.springmvcjsp.service.impl;
+package com.football.service.impl;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.springmvcjsp.model.Team;
-import com.springmvcjsp.repository.TeamRepository;
-import com.springmvcjsp.service.TeamService;
+import com.football.model.Team;
+import com.football.repository.TeamRepository;
+import com.football.service.TeamService;
 
 @Service
 @Transactional

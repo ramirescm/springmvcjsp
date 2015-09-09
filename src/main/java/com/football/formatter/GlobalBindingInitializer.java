@@ -1,4 +1,4 @@
-package com.springmvcjsp.formatter;
+package com.football.formatter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

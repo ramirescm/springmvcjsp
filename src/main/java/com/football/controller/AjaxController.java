@@ -1,4 +1,4 @@
-package com.springmvcjsp.controller;
+package com.football.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.football.dandelion.TeamDandelionService;
+import com.football.model.Team;
 import com.github.dandelion.datatables.core.ajax.DataSet;
 import com.github.dandelion.datatables.core.ajax.DatatablesCriterias;
 import com.github.dandelion.datatables.core.ajax.DatatablesResponse;
 import com.github.dandelion.datatables.extras.spring3.ajax.DatatablesParams;
-import com.springmvcjsp.dandelion.TeamDandelionService;
-import com.springmvcjsp.model.Team;
 
 @Controller
 @RequestMapping(value="/ajax", method = RequestMethod.GET)

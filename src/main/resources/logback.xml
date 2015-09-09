@@ -15,7 +15,7 @@
 		<appender-ref ref="STDOUT" />
 	</root>
 
-	<logger name="com.springmvcjsp" level="ALL" />
+	<logger name="com.football" level="ALL" />
 </configuration>
 
 <!-- <?xml version="1.0" encoding="UTF-8" ?>

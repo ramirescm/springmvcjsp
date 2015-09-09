@@ -1,11 +1,11 @@
-package com.springmvcjsp.service;
+package com.football.service;
 
 import java.util.List;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.springmvcjsp.model.Team;
+import com.football.model.Team;
 
 public interface TeamService {
 

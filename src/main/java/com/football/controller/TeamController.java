@@ -1,4 +1,4 @@
-package com.springmvcjsp.controller;
+package com.football.controller;
 
 import javax.validation.Valid;
 
@@ -8,16 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.springmvcjsp.model.Team;
-import com.springmvcjsp.service.TeamService;
-import com.springmvcjsp.utils.MessageHelper;
+import com.football.model.Team;
+import com.football.service.TeamService;
+import com.football.utils.MessageHelper;
 
 @Controller
 public class TeamController {
@@ -65,9 +64,11 @@ public class TeamController {
 		return "team/form";
 	}
 
-	//public String editPost(@PathVariable("teamId") Long teamId, @Valid @ModelAttribute Team team,
+	// public String editPost(@PathVariable("teamId") Long teamId, @Valid
+	// @ModelAttribute Team team,
 	@RequestMapping(value = "/team/{teamId}/edit", method = RequestMethod.PUT)
-	public String editPost(@PathVariable("teamId") Long teamId, @Valid Team team, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String editPost(@PathVariable("teamId") Long teamId, @Valid Team team, BindingResult result,
+			RedirectAttributes redirectAttributes) {
 		LOGGER.debug("# Team editPost : {}", team);
 		if (result.hasErrors()) {
 			return "team/form";

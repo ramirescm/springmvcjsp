@@ -1,4 +1,4 @@
-package com.springmvcjsp.utils;
+package com.football.utils;
 
 /**
  * A message to be displayed in web context. Depending on the type, different

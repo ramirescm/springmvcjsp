@@ -1,8 +1,8 @@
-package com.springmvcjsp.repository;
+package com.football.repository;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.springmvcjsp.model.Team;
+import com.football.model.Team;
 
 public interface TeamRepository extends PagingAndSortingRepository<Team, Long> {
 	

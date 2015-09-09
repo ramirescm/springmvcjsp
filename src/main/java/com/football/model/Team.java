@@ -1,4 +1,4 @@
-package com.springmvcjsp.model;
+package com.football.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

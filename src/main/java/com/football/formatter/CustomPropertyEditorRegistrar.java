@@ -1,4 +1,4 @@
-package com.springmvcjsp.formatter;
+package com.football.formatter;
 
 import org.springframework.beans.PropertyEditorRegistrar;
 import org.springframework.beans.PropertyEditorRegistry;

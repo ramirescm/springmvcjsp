@@ -1,4 +1,4 @@
-package com.springmvcjsp.dandelion;
+package com.football.dandelion;
 
 import java.util.ArrayList;
 import java.util.Iterator;

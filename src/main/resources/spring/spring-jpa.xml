@@ -41,6 +41,6 @@
 		proxy-target-class="true" />
 
 	<!-- Spring Data -->
-	<jpa:repositories base-package="com.springmvcjsp.repository" />
+	<jpa:repositories base-package="com.football.repository" />
 
 </beans>
