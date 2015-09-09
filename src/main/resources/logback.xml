@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="3 seconds">
+	<contextName>layouts</contextName>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{32} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<jmxConfigurator />
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+	<logger name="com.springmvcjsp" level="ALL" />
+</configuration>
+
+<!-- <?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="3 seconds">
+<configuration debug="true" scan="true">
+	<contextName>layouts</contextName>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{32} -
+				%msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<jmxConfigurator />
+
+	<logger name="com.springmvcjsp" level="INFO" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	Strictly speaking, the level attribute is not necessary since
+	the level of the root level is set to DEBUG by default.
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration> -->
+

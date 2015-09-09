@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html
+   xmlns:th="http://www.thymeleaf.org"
+   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+   <head layout:fragment="head">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="description" content="Agenda Futebol" />
+      <meta name="keywords" content="HTML,CSS,JavaScript,Spring,Spring MVC, PostgreSQL" />
+      <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE" th:text="#{app.name}"></title>
+      <link href="resources/css/style.css"
+         th:href="@{/resources/css/style.css}" 
+         rel="stylesheet" />
+      <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css"
+         th:href="@{/webjars/jquery-ui/1.11.3/jquery-ui.css}" 
+         rel="stylesheet" />
+      <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/3.3.4/css/bootstrap.min.css" 
+         th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}" 
+         rel="stylesheet" />
+   </head>
+   <body>
+   </body>
+</html>

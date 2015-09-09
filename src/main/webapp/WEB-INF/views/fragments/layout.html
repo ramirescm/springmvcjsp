@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:dt="http://github.com/dandelion/datatables"
+    xmlns:ddl="http://www.thymeleaf.org/dandelion">
+<head th:include="common/head::head" />
+<body>
+
+	<nav th:replace="fragments/header :: header">MENU_TOPO</nav>
+
+	<div id="main" class="container">
+
+		<span style="float: right">
+			<a href="?language=en">en</a>
+			|
+			<a href="?language=pt">pt</a>
+		</span>
+
+		<div class="row">
+			<div layout:fragment="page-title"></div>
+			<th:block th:if="${message != null}">
+				<div
+					th:replace="fragments/alert :: alert (type=${#strings.toLowerCase(message.type)}, message=#{${message.message}})">&nbsp;</div>
+			</th:block>
+			<div layout:fragment="main-content"></div>
+			<div layout:fragment="content"></div>
+		</div>
+
+	</div>
+
+	<footer th:replace="fragments/footer :: footer">FOOTER</footer>
+
+
+	<!-- scripts -->
+	<div th:include="common/script::script"></div>
+
+	<!-- inline scripts related to the local page -->
+	<script type="text/javascript" layout:fragment="scripts"></script>
+	<div th:replace="fragments/confirm-dialog :: confirmDialog"></div>
+</body>
+</html>

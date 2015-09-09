@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:dt="http://github.com/dandelion/datatables"
+    xmlns:ddl="http://www.thymeleaf.org/dandelion"
+    layout:decorator="fragments/layout">
+    <head th:include="common/head::head" />
+    <body>
+        <div layout:fragment="page-title">
+            <h3 class="page-header">
+                <span th:text="#{time.titulo}"></span>
+            </h3>
+        </div>
+        <div layout:fragment="main-content">
+            <form th:object="${team}" th:method="${team.new} ? post : put"
+                th:action="@{${#httpServletRequest.servletPath}}" id="add-team-form">
+                <div class="row"
+                    th:classappend="${#fields.hasErrors('name')} ? has-error">
+                    <div class="form-group col-md-4">
+                        <label class="control-label"><span th:text="#{time.nome}"></span></label> <input type="text"
+                            th:field="*{{name}}" class="form-control" /> <span
+                            class="help-inline" th:errors="*{name}">[error]</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a th:href="@{/team/add}" class="btn btn-primary"><span class="glyphicon glyphicon-file"></span>&nbsp;<span th:text="#{botao.novo}"></span></a>
+                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-floppy-save"></span>&nbsp;<span th:text="#{botao.salvar}"></span></button>
+                        <a th:href="@{/team/list}" class="btn btn-primary"><span class="glyphicon glyphicon-list"></span>&nbsp;<span th:text="#{botao.lista}"></span></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

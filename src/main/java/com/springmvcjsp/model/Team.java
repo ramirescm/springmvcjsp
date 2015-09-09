@@ -1,17 +1,12 @@
 package com.springmvcjsp.model;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "TEAM")
@@ -22,7 +17,6 @@ public class Team {
 	@TableGenerator(name = "TEAM", table = "SEQUENCE_GENERATOR", pkColumnName = "SEQUENCE_NAME", valueColumnName = "NEXT_VAL", allocationSize = 100)
 	private Long id;
 	@NotNull
-	@NotEmpty
 	private String name;
 	
 	public Long getId() {
@@ -40,6 +34,11 @@ public class Team {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+
+    public boolean isNew() {
+        return (this.id == null);
+    }
 
 	@Override
 	public int hashCode() {

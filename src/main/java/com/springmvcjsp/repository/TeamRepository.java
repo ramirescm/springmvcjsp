@@ -6,4 +6,5 @@ import com.springmvcjsp.model.Team;
 
 public interface TeamRepository extends PagingAndSortingRepository<Team, Long> {
 	
+	
 }
